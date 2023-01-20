@@ -8,15 +8,46 @@
     <h1>CTF Writeups</h1>
     <h2 id="categories">Writeup Categories</h2>
     <label for="dropdown">Select an option:</label>
-	<select id="dropdown">
-	  <option value="web.html">Web Writeups</option>
-	  <option value="forensics.html">Forensics Writeups</option>
-	  <option value="crypto.html">Crypto Writeups</option>
-	  <option value="binary-analysis.html">Binary Writeups</option>
-	  <option value="osint.html">OSINT Writeups</option>
-	  <option value="misc.html">MISC Writeups</option>
-	  <option value="root-me.html">Root Me Writeups</option>
-	  <option value="root-me-too.html">Root Me Too Writeups</option>
+	<select id="dropdown" onchange="redirect()">
+	  <option value="1">Web Writeups</option>
+	  <option value="2">Forensics Writeups</option>
+	  <option value="3">Crypto Writeups</option>
+	  <option value="4">Binary Writeups</option>
+	  <option value="5">OSINT Writeups</option>
+	  <option value="6">MISC Writeups</option>
+	  <option value="7">Root Me Writeups</option>
+	  <option value="8">Root Me Too Writeups</option>
 	</select>
+	<script>
+	function redirect() {
+	  var selectedValue = document.querySelector("select").value;
+	  switch(selectedValue){
+	    case "1":
+		  window.location.href = "/web/web-writeups.html";
+		  break;
+		case "2":
+		  window.location.href = "/forensics/forensic.html";
+		  break;
+		case "3":
+		  window.location.href = "/crypto/cryptography.html";
+		  break;
+		case "4":
+		  window.location.href = "/binary/binary.html";
+		  break;
+		case "5":
+		  window.location.href = "/osint/intel.html";
+		  break;
+		case "6":
+		  window.location.href = "/misc/miscellaneous.html";
+		  break;
+		case "7":
+		  window.location.href = "/root-me/root1.html";
+		  break;
+		case "8":
+		  window.location.href = "/root-me-too/root2.html";
+		  break;
+		}
+    }
+	</script>
   </body>
 </html>
