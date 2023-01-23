@@ -3,7 +3,7 @@ body {
   color: #FFFFFF;
   text-align: center;
   position: absolute;
-  top: 15%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -12,20 +12,31 @@ h1 {
   text-align: center;
 }
 
-#overlay {
-  position: fixed; 
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  width: 100vw; 
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  pointer-events: none;
-}
-
 #content-container {
   z-index: 2;
+}
+
+#block {
+  background-color: #333333;
+  padding: 105px;
+  height: 100vh;
+  position: center;
+  top: 0;
+  left: 0;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.center1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 li {

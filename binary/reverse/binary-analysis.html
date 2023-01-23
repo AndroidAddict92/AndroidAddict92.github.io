@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CTF Writeups</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<style>
+	body {
+	  background-image: url('../../bg.jpg');
+	  background-repeat: no-repeat;
+	}
+	
+	a:link {
+      color: #FFFFFF;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    a:visited {
+      color: #94F4ED;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+	</style>
+  </head>
+  <body>
+    <div id="overlay"></div>
+	<div id="content-container">
+	  <br />
+	  <br />
+	  <br />
+	  <br />
+	  <br />
+	  <br />
+	  <br />
+	  <br />
+	  <br />
+	  <br />
+	  <br />
+	  <br />
+	  <br />
+	  <br />
+	  <br />
+	  <br />
+	  <br />
+	  <br />
+	  <div id="block">
+      <h1>CTF Writeups</h1>
+      <h2 id="categories">Writeup Categories</h2>
+      <label for="dropdown">Navigate:</label>
+	  <select id="dropdown" onchange="redirect()">
+	    <option value="1">Web Writeups</option>
+	    <option value="2">Forensics Writeups</option>
+	    <option value="3">Crypto Writeups</option>
+	    <option value="4">Binary Writeups</option>
+	    <option value="5">OSINT Writeups</option>
+	    <option value="6">MISC Writeups</option>
+	    <option value="7">Root Me Writeups</option>
+	    <option value="8">Root Me Too Writeups</option>
+	  </select>
+	  <script>
+	  function redirect() {
+	    var selectedValue = document.querySelector("select").value;
+	    switch(selectedValue){
+	      case "1":
+		    window.location.href = "../../web/web-writeups.html";
+		    break;
+		  case "2":
+		    window.location.href = "../../forensics/forensic.html";
+		    break;
+		  case "3":
+		    window.location.href = "../../crypto/cryptography.html";
+		    break;
+		  case "4":
+		    window.location.href = "../../binary/binary.html";
+		    break;
+		  case "5":
+		    window.location.href = "../../osint/intel.html";
+		    break;
+		  case "6":
+		    window.location.href = "../../misc/miscellaneous.html";
+		    break;
+		  case "7":
+		    window.location.href = "../../root-me/root1.html";
+		    break;
+		  case "8":
+		    window.location.href = "../../root-me-too/root2.html";
+		    break;
+		  }
+      }
+	  </script>
+	  <br />
+	  <br />
+	  <br />
+	  <h2>Raices CTF Binary Analysis</h2>
+	  <h3>Password Protected Zip File</h3>
+	  <br />
+      <p>Upon downloading the task files, we are presented with the file raicesCTFbinaries.zip. We cannot extract the contents until we crack the password on the zip. This is where John the Ripper comes in.</p>
+      <p>Step 1: Open Terminal and run:</p>
+	  <pre>
+	    <code>zip2john raicesCTFbinaries.zip > hash.txt</code>
+		<img src="../../img/zip2john.png" class="center"></img>
+	  </pre>
+      <p>Step 2: Now that we have our hash file, it is time to run the hash against our wordlist to crack the password. In terminal, run:</p>
+	  <pre>
+	    <code>john --wordlist=/path/to/wordlist hash.txt</code>
+		<img src="../../img/johncracked.png" class="center1"></img>
+	  </pre>
+      <p>The password to the zip file is “password”</p>
+      <p>Now we have cracked the password to the zip file, it is time to continue with the Binary Analysis section!</p>
+	  </div>
+	</div>
+  </body>
+</html>
