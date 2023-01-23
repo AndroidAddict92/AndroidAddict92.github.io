@@ -23,19 +23,7 @@
 	</style>
   </head>
   <body>
-    <div id="overlay"></div>
 	<div id="content-container">
-	  <br />
-	  <br />
-	  <br />
-	  <br />
-	  <br />
-	  <br />
-	  <br />
-	  <br />
-	  <br />
-	  <br />
-	  <br />
 	  <br />
 	  <br />
 	  <br />
@@ -89,8 +77,6 @@
       }
 	  </script>
 	  <br />
-	  <br />
-	  <br />
 	  <h2>Raices CTF Binary Analysis</h2>
 	  <h3>Password Protected Zip File</h3>
 	  <br />
@@ -103,10 +89,29 @@
       <p>Step 2: Now that we have our hash file, it is time to run the hash against our wordlist to crack the password. In terminal, run:</p>
 	  <pre>
 	    <code>john --wordlist=/path/to/wordlist hash.txt</code>
-		<img src="../../img/johncracked.png" class="center1"></img>
+		<img src="../../img/johncracked.png" class="center"></img>
 	  </pre>
       <p>The password to the zip file is “password”</p>
       <p>Now we have cracked the password to the zip file, it is time to continue with the Binary Analysis section!</p>
+	  <br />
+	  <br />
+	  <h3>Q1: What is the MD5 of the chulo binary?</h3>
+	  <p>Step 1: Open Terminal in the Extracted folder containing the Chulo Binary</p>
+	  <p>Step 2: Run this command in Terminal:</p>
+	  <pre>
+	    <code>md5sum chulo</code>
+	  </pre>
+	  <p>The printed content is your flag!</p>
+	  <br />
+	  <br />
+	  <h3>Q2: What is the SHA1 of the chulo binary?</h3>
+	  <p>Step 1: With your same Terminal session, run:</p>
+	  <pre>
+	    <code>sha1sum -c chulo</code>
+	  </pre>
+	  <p>The printed content is your flag!</p>
+	  <br />
+	  <br />
 	  </div>
 	</div>
   </body>
