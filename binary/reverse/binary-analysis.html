@@ -25,15 +25,7 @@
 	</style>
   </head>
   <body>
-	<div id="content-container">
-	  <br />
-	  <br />
-	  <br />
-	  <br />
-	  <br />
-	  <br />
-	  <br />
-	  <div id="block">
+	<div id="block">
       <h1>CTF Writeups</h1>
       <h2 id="categories">Writeup Categories</h2>
       <label for="dropdown">Navigate:</label>
@@ -109,12 +101,54 @@
 	  <h3>Q2: What is the SHA1 of the chulo binary?</h3>
 	  <p>Step 1: With your same Terminal session, run:</p>
 	  <pre>
-	    <code>sha1sum -c chulo</code>
+	    <code>sha1sum chulo</code>
 	  </pre>
 	  <p>The printed content is your flag!</p>
 	  <br />
 	  <br />
-	  </div>
+	  <h3>Q3: What is the SHA256 of the chulo binary?</h3>
+	  <p>Step 1: With your same Terminal session, run:</p>
+	  <pre>
+	    <code>sha256sum chulo</code>
+	  </pre>
+	  <p>The printed content is your flag!</p>
+	  <br />
+	  <br />
+	  <h3>Q4: What was the first submission of the guapo binary to Virustotal?  The format is YYYY-MM-DD HH:MM:SS</h3>
+	  <p>Note: The hint for this is in the question itself (Virustotal).</p>
+	  <p>Step 1: Upload the guapo binary to Virustotal. Upon uploading, we are presented with information on the file, including the flag for this question.</p>
+	  <img src="../../img/guapo.png" class="center"></img>
+	  <br />
+	  <br />
+	  <h3>Q5: What program and version, was used to pack the binary?</h3>
+	  <p>The answer to this question is in the Virustotal screenshot!</p>
+	  <br />
+	  <br />
+	  <h3>Q6: What non-standard URL did the developer leave as a string in the chulo binary?</h3>
+	  <p>Finally, diving into some strings! Note that we are being asked about a URL in the strings of the binary!</p>
+	  <p>Step 1: With your terminal, run:</p>
+	  <pre>
+	    <code>strings chulo | grep https</code>
+		<img src="../../img/chulostrings.png" class="center"></img>
+	  </pre>
+	  <p>The printed link is your flag!</p>
+	  <br />
+	  <br />
+	  <h3>Q9: What was the hidden flag in the chulo binary?</h3>
+	  <p>When running the binary, it prompts for text. In the past, the text to input is typically in the strings. Lets save the strings!</p>
+	  <pre>
+	    <code>strings chulo > chulo.txt</code>
+	  </pre>
+	  <p>Open the new chulo.txt file and search for "Enter"</p>
+	  <img src="../../img/chulostringsfile.png" class="center"></img>
+	  <p>We now see the expected text is "ATHL337". Run the chulo binary and input the text</p>
+	  <pre>
+	    <code>./chulo</code>
+		<img src="../../img/chuloflag.png" class="center"></img>
+	  </pre>
+	  <p>We now have our flag! This concludes the binary questions I was able to answer before the end of the event!</p>
+	  <br />
+	  <br />
 	</div>
   </body>
 </html>
