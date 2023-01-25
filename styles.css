@@ -48,3 +48,8 @@ pre code {
   list-style-position: inside;
 }
 
+#ol-listed {
+  margin: 0 auto;
+  padding-right: 35px;
+  list-style-position: inside;
+}

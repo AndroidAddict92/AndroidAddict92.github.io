@@ -98,8 +98,55 @@
 	  <p>We know the address for "<i>The Troubadour</i>" is <u><b>1111 Gravier St, New Orleans, LA 70112</b></u></p>
 	  <br />
 	  <p>Step 5: Go to Google Streetview and search the address we found. Once you are there, drag and drop the "Person" to that location. Time to start exploring!</p>
-	  <p>After going steet to street, I finally stumbled upon a familiar view! We are close!!</p>
+	  <p>After going street to street, I finally stumbled upon a familiar view! We are close!!</p>
 	  <img src="../../img/osint2street.png" class="center"></img>
+	  <p>Looking around, we see a hotel directly beside us! Just to be sure, I viewed photos of the hotel and was able to confirm, we have found our hotel!</p>
+	  <img src="../../img/osint2view.png" class="center"></img>
+	  <p>The Hotel name and city is our flag!</p>
+	  <br />
+	  <br />
+	  <h3>Question 3: What beach is this?</h3>
+	  <img src="../../img/osint3.png" class="center"></img>
+	  <br />
+	  <p>Step 1: Download the photo</p>
+	  <p>Step 2: Go to Google, select the little camera icon, upload the photo we downloaded for this challenge!</p>
+	  <p>Upon uploading the image, we see it is one of the first results! The name of the beach is our flag!</p>
+	  <br />
+	  <br />
+	  <h3>Question 6: Keeber Security Group has a flag hidden. Can you find it?</h3>
+	  <p>After spending too much time going through their website and GitHub repository, I was stumped. I couldn't find anything relating to a flag. I had tried all the manual methods I could think of so I figured I would start with Terminal.</p>
+	  <p>In Terminal, run:</p>
+	  <pre>
+	    <code>whois keebersecuritygroup.com</code>
+		<img src="../../img/keeber.png" class="center"></img>
+	  </pre>
+	  <p>We have finally found our flag!</p>
+	  <br />
+	  <br />
+	  <h3>Questions 7 - 10: You can find all the answers to these questions with this MAC address: 3C:52:82:0A:4A:71</h3>
+	  <nav>
+	    <ol start="7" id="ol-listed">
+		  <li>What city is this device located in?</li>
+		  <li>What is the SSID for this device?</li>
+		  <li>What is the netid of this device? -- Did not complete</li>
+		  <li>What street is the device located on?</li>
+		</ol>
+	  </nav>
+	  <p>When I think about finding the location of a MAC address. I think <a href="wigle.net">Wigle</a>.</p>
+	  <p>About Wigle:</p>
+	  <p>Wigle.net is a website and mobile app that allows users to view and contribute to a database of wireless access points. The database is user-contributed and can be searched by location, network name, and other parameters.</p>
+	  <p>The website also provides tools for analyzing wireless networks and mapping their coverage. The goal of the service is to provide a comprehensive and up-to-date map of wireless networks worldwide.</p>
+	  <br />
+	  <p>Now that we know the purpose of Wigle, lets dive in!</p>
+	  <p>Step 1: Navigate to Wigle and create an account if you do not already have one!</p>
+	  <p>Step 2: On the right side of the screen, you will see a BSSID field, input the MAC there!</p>
+	  <img src="../../img/bssid.png" class="center"></img>
+	  <p>Scroll until you find the pin of that MAC address!</p>
+	  <img src="../../img/macpin.png" class="center"></img>
+	  <p>Step 3: Zoom all the way in until you see the MAC belongs to a printer!</p>
+	  <p>Click the device and you will be presented with all the information you need to answer these questions!</p>
+	  <br />
+	  <p>This concludes the RaicesCTF OSINT Challenges!</p>
 	  <br />
 	  <br />
 	</div>
