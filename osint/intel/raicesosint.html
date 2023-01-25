@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CTF Writeups</title>
+	<link rel="stylesheet" type="text/css" href="../../styles.css">
+	<style>
+	body {
+	  background-image: url('../../bg.jpg');
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-size: cover;
+	}
+	
+	a:link {
+      color: #FFFFFF;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    a:visited {
+      color: #94F4ED;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+	</style>
+  </head>
+  <body>
+	<div id="block">
+      <h1>CTF Writeups</h1>
+      <h2 id="categories">Writeup Categories</h2>
+      <label for="dropdown">Navigate:</label>
+	  <select id="dropdown" onchange="redirect()">
+	    <option value="1">Web Writeups</option>
+	    <option value="2">Forensics Writeups</option>
+	    <option value="3">Crypto Writeups</option>
+	    <option value="4">Binary Writeups</option>
+	    <option value="5">OSINT Writeups</option>
+	    <option value="6">MISC Writeups</option>
+	    <option value="7">Root Me Writeups</option>
+	    <option value="8">Root Me Too Writeups</option>
+	  </select>
+	  <script>
+	  function redirect() {
+	    var selectedValue = document.querySelector("select").value;
+	    switch(selectedValue){
+	      case "1":
+		    window.location.href = "../../web/web-writeups.html";
+		    break;
+		  case "2":
+		    window.location.href = "../../forensics/forensic.html";
+		    break;
+		  case "3":
+		    window.location.href = "../../crypto/cryptography.html";
+		    break;
+		  case "4":
+		    window.location.href = "../../binary/binary.html";
+		    break;
+		  case "5":
+		    window.location.href = "../../osint/intel.html";
+		    break;
+		  case "6":
+		    window.location.href = "../../misc/miscellaneous.html";
+		    break;
+		  case "7":
+		    window.location.href = "../../root-me/root1.html";
+		    break;
+		  case "8":
+		    window.location.href = "../../root-me-too/root2.html";
+		    break;
+		  }
+      }
+	  </script>
+	  <br />
+	  <h2>Raices CTF OSINT Challenges</h2>
+	  <h3>Question 1: Find the flag hidden in this image!</h3>
+	  <img src="../../img/osint1.jpg" class="center"></img>
+	  <p><i>Note: The flag format for this event was flag{}</i></p>
+	  <br />
+	  <p>Step 1: Download the image.</p>
+	  <p>After downloading the image, I inspected the photo to see if there was a visible indication of a flag being hidden in the image. Once I confirmed I was not able to see a flag, I decided to run strings on the image.</p>
+	  <p>Step 2: I renamed the photo to osint1.jpg</p>
+	  <p>Step 3: Open Terminal and run:</p>
+	  <pre>
+	    <code>strings osint1.jpg | grep flag</code>
+		<img src="../../img/osint1strings.png" class="center"></img>
+	  </pre>
+	  <p>Our flag is printed in the Terminal!</p>
+	  <h3>Question 2:  What is the hotel this photo was taken from and what city?</h3>
+	  <img src="../../img/osint2.png" class="center"></img>
+	  <p><i>Note: Time to see how good you are with your google reverse search!!</i></p>
+	  <br />
+	  <p>Step 1: Download the photo</p>
+	  <p>Step 2: Go to Google, select the little camera icon, upload the photo we downloaded for this challenge!</p>
+	  <p>Step 3: Banged my head against the wall repeatedly (Only kidding)</p>
+	  <p>Step 4: Cropped different areas of the photo until I found something similar. I found a hotel named The Troubadour in New Orleans!</p>
+	  <img src="../../img/osint2troub.png" class="center"></img>
+	  <p>Now that we found the general location, lets navigate the street view until we find a similar angle of the original image!</p>
+	  <br />
+	  <br />
+	</div>
+  </body>
+</html>
