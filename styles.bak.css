@@ -1,0 +1,41 @@
+body {
+  background-color: #4C4C4C;
+  color: #FFFFFF;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  text-align: center;
+}
+
+#block {
+  background-color: #333333;
+  padding: 105px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+#content-container {
+  z-index: 2;
+}
+
+li {
+  color: #FFFFFF;
+}
+
+pre code {
+  background-color: grey;
+  border: 1px solid #999;
+  display: block;
+  padding: 10px;
+}

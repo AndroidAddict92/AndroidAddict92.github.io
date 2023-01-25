@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CTF Writeups</title>
+	<link rel="stylesheet" type="text/css" href="../styles.css">
+	<style>
+	body {
+	  background-image: url('../bg.jpg');
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-size: cover;
+	}
+	
+	a:link {
+      color: #FFFFFF;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    a:visited {
+      color: #94F4ED;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+	</style>
+  </head>
+  <body>
+	  <div id="block">
+      <h1>CTF Writeups</h1>
+      <h2 id="categories">Writeup Categories</h2>
+      <label for="dropdown">Navigate:</label>
+	  <select id="dropdown" onchange="redirect()">
+	    <option value="1">Web Writeups</option>
+	    <option value="2">Forensics Writeups</option>
+	    <option value="3">Crypto Writeups</option>
+	    <option value="4">Binary Writeups</option>
+	    <option value="5">OSINT Writeups</option>
+	    <option value="6">MISC Writeups</option>
+	    <option value="7">Root Me Writeups</option>
+	    <option value="8">Root Me Too Writeups</option>
+	  </select>
+	  <script>
+	  function redirect() {
+	    var selectedValue = document.querySelector("select").value;
+	    switch(selectedValue){
+	      case "1":
+		    window.location.href = "../web/web-writeups.html";
+		    break;
+		  case "2":
+		    window.location.href = "../forensics/forensic.html";
+		    break;
+		  case "3":
+		    window.location.href = "../crypto/cryptography.html";
+		    break;
+		  case "4":
+		    window.location.href = "../binary/binary.html";
+		    break;
+		  case "5":
+		    window.location.href = "../osint/intel.html";
+		    break;
+		  case "6":
+		    window.location.href = "../misc/miscellaneous.html";
+		    break;
+		  case "7":
+		    window.location.href = "../root-me/root1.html";
+		    break;
+		  case "8":
+		    window.location.href = "../root-me-too/root2.html";
+		    break;
+		  }
+      }
+	  </script>
+	  <h1>OSINT Challenges</h1>
+      <nav>
+        <ul id="links">
+          <li><a href="../osint/intel/raicesosint.html">RaicesCTF OSINT</a></li>
+        </ul>
+      </nav>
+	  <br />
+	  <br />
+	  <h3>Overview of all Challenges</h3>
+	  <p>The OSINT challenges above were solved using a combination of online research techniques, such as searching for keywords on Google and social media platforms, analyzing images and videos, and utilizing various online tools to extract information.</p>
+	  <p>By utilizing these methods, I was able to uncover hidden flags and solve each challenge. For example, by searching for specific keywords on Google, I was able to find hidden flags in the source code of web pages.</p>
+	  <p>Additionally, by analyzing images and videos, I was able to uncover hidden messages and flags. By utilizing various online tools, such as reverse image search and metadata extraction tools, I was able to extract additional information that helped me solve the challenges.</p>
+	  <p>Overall, my approach to solving the OSINT challenges was to use a variety of online research techniques and tools to uncover hidden information and flags.</p>
+	  </div>
+	</div>
+  </body>
+</html>
